@@ -34,20 +34,20 @@ describe CheckTag do
     end
 
     context "check tag with check set to false" do
-      let(:ct)            { check_tag("my_id", 'false') }
+      let(:ct)            { check_tag("my_id", 'false', 'true') }
 
       it "returns a hidden tag set to false" do
-        ct.should include('<input id="my_id" name="my_id" type="hidden" value="false" />')
+        ct.should include('<input id="my_id" name="my_id" type="hidden" value="true" />')
       end
 
       it "returns a check tag set to false" do
-        ct.should include('<input checked="checked" id="my_id" name="my_id" type="checkbox" value="false" />')
+        ct.should include('<input id="my_id" name="my_id" type="checkbox" value="false" />')
       end
 
     end
 
     context "check tag with uncheck set to false" do
-      let(:ct)            { check_tag("my_id", nil, 'false') }
+      let(:ct)            { check_tag("my_id", 'true', 'false') }
 
       it "returns a hidden tag set to false" do
         ct.should include('<input id="my_id" name="my_id" type="hidden" value="false" />')
