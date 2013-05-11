@@ -14,4 +14,9 @@ Gem::Specification.new do |gem|
   gem.name          = "check_tag"
   gem.require_paths = ["lib"]
   gem.version       = CheckTag::VERSION
+
+  gem.add_development_dependency "rspec"
+  gem.add_development_dependency "rspec-rails"
+  gem.add_development_dependency "actionpack"
+  gem.add_development_dependency "activesupport"
 end
