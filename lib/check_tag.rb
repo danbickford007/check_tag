@@ -6,6 +6,6 @@ end
 
 module CheckTag
   def check_tag(id, check=true, uncheck=false, defaulted=false)
-    raw "#{hidden_field_tag(id, uncheck)} #{check_box_tag(id, check, defaulted)}"
+    hidden_field_tag(id, uncheck) + check_box_tag(id, check, defaulted)
   end
 end
