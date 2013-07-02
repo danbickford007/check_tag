@@ -19,7 +19,7 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "rspec-rails"
   gem.add_development_dependency "actionpack"
   if RUBY_VERSION == '1.9.2'
-    gem.add_development_dependency "activesupport", , '3.2.13'
+    gem.add_development_dependency "activesupport", '3.2.13'
   else
     gem.add_development_dependency "activesupport"
   end
